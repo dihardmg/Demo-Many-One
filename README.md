@@ -9,5 +9,3 @@
         
 ![Screenshot](img/1.png "Screenshot")
 
-
-![data](img/2.png "data")
