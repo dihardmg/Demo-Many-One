@@ -28,20 +28,22 @@ CREATE TABLE c_security_user_password (
     password character varying(255) NOT NULL
 );
 
-CREATE TABLE karyawan(
-  id character varying(255) NOT NULL PRIMARY KEY,
-  nama character varying(255) NOT NULL,
+
+CREATE TABLE pulsa(
+id character varying(255) NOT NULL PRIMARY KEY,
+  paket character varying(255) NOT NULL,
   keterangan character varying(255)
 );
 
-CREATE TABLE alamat(
+
+CREATE TABLE person(
   id character varying(255) NOT NULL PRIMARY key,
   nama character varying(255) NOT NULL,
-  alamat character varying(255) NOT NULL,
-  id_karyawan character varying(255) NOT NULL
+  nohp character varying(14) NOT  NULL ,
+  id_pulsa character varying(255) NOT NULL
 );
 
-ALTER TABLE alamat
-ADD CONSTRAINT fk_alamat_karyawan FOREIGN KEY (id_karyawan) REFERENCES karyawan(id);
 
 
+ALTER TABLE person
+ADD CONSTRAINT fk_pulsa_person FOREIGN KEY (id_pulsa) REFERENCES pulsa(id);

@@ -1,6 +1,7 @@
 package com.dihardmg.kayrawanapp.dao;
 
-import com.dihardmg.kayrawanapp.entity.Karyawan;
+
+import com.dihardmg.kayrawanapp.entity.Pulsa;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.repository.PagingAndSortingRepository;
@@ -11,6 +12,6 @@ import org.springframework.stereotype.Repository;
  * @since : 1/4/18
  */
 @Repository
-public interface KaryawanDao extends PagingAndSortingRepository<Karyawan, String> {
-    Page<Karyawan>findByNamaContainingIgnoreCase(String nama, Pageable pageable);
+public interface PulsaDao extends PagingAndSortingRepository<Pulsa, String> {
+    Page<Pulsa>findByPaketContainingIgnoreCase(String paket, Pageable page);
 }

@@ -2,9 +2,12 @@
 
 - DEMO
 
-       https://karyawan-app.herokuapp.com/login
+       http://localhost:8080/
        Username: admin
        password: 123
 
         
-![Screenshot](img/screenshoot.gif "Screenshot")
+![Screenshot](img/1.png "Screenshot")
+
+
+![data](img/2.png "data")

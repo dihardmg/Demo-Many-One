@@ -1,14 +1,14 @@
 <!--/* Thymeleaf templating engine, Each token will be replaced by their respective titles in the resulting page. */-->
 <html xmlns:th="http://www.thymeleaf.org" layout:decorate="~{layout}">
 <head>
-    <title>Hapus Data</title>
+    <title>Pulsa</title>
 </head>
 <body>
 <div layout:fragment="breadcrumb">
-    <h1>Hapus Data Karyawan?</h1>
+    <h1>Data Pulsa</h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Hapus Data Karyawan</li>
+        <li class="active">Data Pulsa</li>
     </ol>
 </div>
 <div layout:fragment="content">
@@ -20,31 +20,31 @@
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" th:object="${karyawan}" method="post">
-
+                <form role="form" th:object="${pulsa}" method="post">
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="nama">Nama</label>
+                            <label for="paket">Paket</label>
                             <input type="text"
-                                   th:field="*{nama}"
-                                   name="nama" class="form-control" id="nama" placeholder="Nama" disabled/>
+                                   th:field="*{paket}"
+                                   name="nama" class="form-control" id="nama" placeholder="Paket" />
+                            <label class="control-label error-label" th:if="${#fields.hasErrors('paket')}" th:errors="*{paket}">
+                                Pesan error nanti di sini
+                            </label>
                         </div>
-
-
                         <div class="form-group">
                             <label for="nama">Keterangan</label>
                             <input type="text"
                                    th:field="*{keterangan}"
-                                   name="keterangan" class="form-control" id="keterangan" placeholder="Keterangan"
-                                   disabled/>
+                                   name="keterangan" class="form-control" id="keterangan" placeholder="Keterangan" />
+                            <label class="control-label error-label"  th:if="${#fields.hasErrors('keterangan')}"th:errors="*{keterangan}">
+                                Pesan error nanti di sini
+                            </label>
                         </div>
-
-
                         <div class="form-group">
-                            <a th:href="@{/karyawan/list}" class="btn btn-default" role="button" title="Back list">
+                            <a th:href="@{/pulsa/list}" class="btn btn-default" role="button" title="Back list">
                                 <span aria-hidden="true"></span>Batal
                             </a>
-                            <button type="submit" class="btn btn-danger" title="Delete Data">Hapus</button>
+                            <button type="submit" class="box-title btn btn-primary" title="Save Data">Simpan</button>
                         </div>
                     </div>
                     <!-- /.box-body -->

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 
     <!--/* Thymeleaf templating engine, Each token will be replaced by their respective titles in the resulting page. */-->
-    <title layout:title-pattern="$LAYOUT_TITLE :: $CONTENT_TITLE">Employe</title>
+    <title layout:title-pattern="$LAYOUT_TITLE :: $CONTENT_TITLE">sigma</title>
 
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
 
@@ -74,7 +74,7 @@
         <a href="#" th:href="@{/}" class="logo">
             <span class="logo-mini"><b>A</b>D</span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>APLIKASI</b>Karyawan</span>
+            <span class="logo-lg"><b>APLIKASI</b>PULSA</span>
         </a>
 
         <!-- Header Navbar -->
@@ -148,10 +148,10 @@
                                 </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li sec:authorize="hasRole('MASTER_KARYAWAN')"><a th:href="@{/karyawan/list}">Karyawan</a></li>
-                        <li sec:authorize="hasRole('MASTER_ALAMAT')"><a th:href="@{/alamat/list}">Alamat</a></li>
 
-                    </ul>
+                        <li sec:authorize="hasRole('MASTER_PERSON')"><a th:href="@{/person/list}">Person</a></li>
+                        <li sec:authorize="hasRole('MASTER_PULSA')"><a th:href="@{/pulsa/list}">Pulsa</a></li>
+                        </ul>
                 </li>
 
                 <li class="treeview" id="kegiatandosen" sec:authorize="hasRole('KEGIATAN')">

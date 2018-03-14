@@ -3,22 +3,19 @@ package com.dihardmg.kayrawanapp.entity;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.validator.constraints.NotEmpty;
-import org.springframework.stereotype.Controller;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @author : Otorus
  * @since : 1/4/18
  */
 @Entity
-@Table(name = "karyawan")
+@Table(name = "pulsa")
 @Data
-public class Karyawan {
+public class Pulsa {
 
     @Id
     @GeneratedValue(generator = "uuid")
@@ -29,11 +26,10 @@ public class Karyawan {
     @NotNull
     @Size(min = 3, max = 255)
     @Column(nullable = false)
-    private String nama;
+    private String paket;
 
-    @NotEmpty
+
     @Size(max = 255)
-    @Column(nullable = false)
     private String keterangan;
 
 }

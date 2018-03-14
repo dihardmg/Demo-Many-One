@@ -5,10 +5,10 @@
 </head>
 <body>
 <div layout:fragment="breadcrumb">
-    <h1>Hapus Data Alamat?</h1>
+    <h1>Hapus Data pulsa?</h1>
     <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li class="active">Hapus Data Alamat</li>
+        <li class="active">Hapus Data pulsa</li>
     </ol>
 </div>
 <div layout:fragment="content">
@@ -20,35 +20,28 @@
                 </div>
                 <!-- /.box-header -->
                 <!-- form start -->
-                <form role="form" th:object="${alamat}" method="post">
+                <form role="form" th:object="${pulsa}" method="post">
 
                     <div class="box-body">
                         <div class="form-group">
-                            <label for="nama">KategoriNama</label>
+                            <label for="paket">Paket</label>
                             <input type="text"
-                                   th:field="*{karyawan.nama}"
+                                   th:field="*{paket}"
                                    name="nama" class="form-control" id="nama" placeholder="Nama" disabled/>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="nama">Nama</label>
+                            <label for="nama">Keterangan</label>
                             <input type="text"
-                                   th:field="*{nama}"
-                                   name="nama" class="form-control" id="nama" placeholder="Keterangan" disabled/>
+                                   th:field="*{keterangan}"
+                                   name="keterangan" class="form-control" id="keterangan" placeholder="Keterangan"
+                                   disabled/>
                         </div>
 
 
                         <div class="form-group">
-                            <label for="nama">Keterangan Nama</label>
-                            <input type="text"
-                                   th:field="*{alamat}"
-                                   name="alamat" class="form-control" id="alamat" placeholder="alamat" disabled/>
-                        </div>
-
-
-                        <div class="form-group">
-                            <a th:href="@{/karyawan/list}" class="btn btn-default" role="button" title="Back list">
+                            <a th:href="@{/pulsa/list}" class="btn btn-default" role="button" title="Back list">
                                 <span aria-hidden="true"></span>Batal
                             </a>
                             <button type="submit" class="btn btn-danger" title="Delete Data">Hapus</button>
