@@ -2,9 +2,11 @@ package com.dihardmg.kayrawanapp.entity;
 
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 /**
@@ -20,13 +22,14 @@ public class Person {
     @GenericGenerator(name = "uuid", strategy = "uuid2")
     private String id;
 
+    @NotEmpty
     @NotNull
     @Column(nullable = false)
     private String nama;
 
-    @NotNull
+
+    @Pattern(regexp="(^$|[0-9]{9,12})")
     @Column(nullable = false)
-    @Size(min = 9, max = 14)
     private String nohp;
 
     @ManyToOne

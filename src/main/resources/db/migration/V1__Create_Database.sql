@@ -39,7 +39,7 @@ id character varying(255) NOT NULL PRIMARY KEY,
 CREATE TABLE person(
   id character varying(255) NOT NULL PRIMARY key,
   nama character varying(255) NOT NULL,
-  nohp character varying(14) NOT  NULL ,
+  nohp character varying(12) NOT  NULL ,
   id_pulsa character varying(255) NOT NULL
 );
 
